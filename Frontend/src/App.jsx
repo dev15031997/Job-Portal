@@ -1,13 +1,12 @@
-import React from 'react'
-import { Button } from "@/components/ui/button"
 import './App.css';
+import Navbar from './components/shared/Navbar';
 
 
 const App = () => {
   return (
-    <div>
-      <Button>Click me</Button>
-    </div>
+    <>
+      <Navbar/>
+    </>
   )
 }
 
