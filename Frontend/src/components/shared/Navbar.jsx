@@ -1,12 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { LogOut, User2 } from 'lucide-react';
+import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios'
 
 const Navbar = () => {
-    const user = false;
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const { user } = useSelector(store => store.auth);
 
     return (
         <div className='bg-white'>
