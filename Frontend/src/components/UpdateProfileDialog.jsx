@@ -60,9 +60,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
             console.log(error);
             toast.error(error.response.data.message);
         } finally{
-            setLoading(false);2.
-            65
-            2
+            setLoading(false);
         }
         setOpen(false);
         console.log(input);
