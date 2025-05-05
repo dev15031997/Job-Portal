@@ -1,4 +1,5 @@
 import './App.css';
+import Companies from './components/admin/Companies';
 import Login from './components/auth/Login';
 import Signup from './components/auth/Signup';
 import Browse from './components/Browse';
@@ -39,6 +40,14 @@ const appRouter = createBrowserRouter([
     path: "/profile",
     element: <Profile />
   },
+
+  // Admin ROutes
+  {
+    path:"/admin/companies",
+    element: <Companies/>
+  },
+
+
 ])
 function App() {
 
