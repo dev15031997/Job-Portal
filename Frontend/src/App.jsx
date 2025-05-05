@@ -1,6 +1,7 @@
 import './App.css';
 import Companies from './components/admin/Companies';
 import CompanyCreate from './components/admin/CompanyCreate';
+import CompanySetup from './components/admin/CompanySetup';
 import Login from './components/auth/Login';
 import Signup from './components/auth/Signup';
 import Browse from './components/Browse';
@@ -50,6 +51,10 @@ const appRouter = createBrowserRouter([
   {
     path:"/admin/companies/create",
     element: <CompanyCreate/>
+  },
+  {
+    path:"/admin/companies/:id",
+    element: <CompanySetup/>
   },
 
 ])
