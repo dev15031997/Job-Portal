@@ -11,6 +11,7 @@ import Jobs from './components/Jobs';
 import Profile from './components/Profile';
 import Navbar from './components/shared/Navbar';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import AdminJobs from './components/admin/AdminJobs';
 
 
 const appRouter = createBrowserRouter([
@@ -55,6 +56,10 @@ const appRouter = createBrowserRouter([
   {
     path:"/admin/companies/:id",
     element: <CompanySetup/>
+  },
+  {
+    path:"/admin/jobs",
+    element: <AdminJobs />
   },
 
 ])
