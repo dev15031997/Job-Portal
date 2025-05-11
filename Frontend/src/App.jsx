@@ -12,6 +12,7 @@ import Profile from './components/Profile';
 import Navbar from './components/shared/Navbar';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AdminJobs from './components/admin/AdminJobs';
+import PostJob from './components/admin/PostJob';
 
 
 const appRouter = createBrowserRouter([
@@ -60,6 +61,10 @@ const appRouter = createBrowserRouter([
   {
     path:"/admin/jobs",
     element: <AdminJobs />
+  },
+  {
+    path:"/admin/jobs/create",
+    element: <PostJob />
   },
 
 ])
