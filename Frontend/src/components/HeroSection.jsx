@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import { Button } from './ui/button'
 import { Search } from 'lucide-react'
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { setSearchedQuery } from '@/redux/jobSlice';
 import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
-    // const [query, setQuery] = useState("");
-    // const dispatch = useDispatch();
+    const [query, setQuery] = useState("");
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const searchJobHandler = () => {
+        dispatch(setSearchedQuery(query));
         navigate("/browse");
     }
 
@@ -23,7 +25,7 @@ const HeroSection = () => {
                     <input
                         type="text"
                         placeholder='Job title, keywords, or company'
-                        // onChange={(e) => setQuery(e.target.value)}
+                        onChange={(e) => setQuery(e.target.value)}
                         className='outline-none border-none w-full'
 
                     />
