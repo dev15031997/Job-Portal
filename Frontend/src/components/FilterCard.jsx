@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { RadioGroup, RadioGroupItem } from './ui/radio-group'
 import { Label } from './ui/label'
 import { useDispatch } from 'react-redux'
-// import { setSearchedQuery } from '@/redux/jobSlice'
+import { setSearchedQuery } from '@/redux/jobSlice'
 
 const fitlerData = [
     {
@@ -25,9 +25,9 @@ const FilterCard = () => {
     const changeHandler = (value) => {
         setSelectedValue(value);
     }
-    // useEffect(()=>{
-    //     dispatch(setSearchedQuery(selectedValue));
-    // },[selectedValue]);
+    useEffect(()=>{
+        dispatch(setSearchedQuery(selectedValue));
+    },[selectedValue]);
     return (
         <div className='w-full bg-white p-3 rounded-md'>
             <h1 className='font-bold text-lg'>Filter Jobs</h1>
